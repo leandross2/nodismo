@@ -7,4 +7,8 @@ const app = express()
 app.use(cors())
 app.use('/api', routes)
 
-app.listen(3005)
+var port = process.env.PORT || 3000;
+app.listen(port, function () {
+    console.log('Umbler listening on port %s', port);
+});
+app.listen(port)
